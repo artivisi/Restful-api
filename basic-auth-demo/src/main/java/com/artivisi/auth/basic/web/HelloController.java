@@ -8,7 +8,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String allCategory() {
-        return "Halo Kawan Kawan";
+        return "Halo";
     }
     
 

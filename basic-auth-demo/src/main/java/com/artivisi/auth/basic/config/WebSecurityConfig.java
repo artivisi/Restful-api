@@ -16,10 +16,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .anyRequest().authenticated()
-                .and().csrf().disable()
-                .formLogin().loginPage("/login").permitAll()
-                .and()
-                .logout().permitAll();
+                .and().httpBasic()
+                .and().csrf().disable();
     }
 
     @Autowired
